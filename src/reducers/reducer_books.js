@@ -1,5 +1,5 @@
 // book reducer which is a function that returns a piece of our application state which is a list of books
-function() {
+export default function() {
   return [
     {title: 'JavaScript' },
     {title: 'Harry Potter'},
