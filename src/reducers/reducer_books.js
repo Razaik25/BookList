@@ -5,5 +5,5 @@ export default function() {
     {title: 'Harry Potter'},
     {title: 'The Dark Knight'},
     {title: 'Nancy Drew'}
-  ]
+  ];
 }
