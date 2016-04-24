@@ -43,7 +43,7 @@ Actions and Action Creator
 ---
 * When user triggers an event such as a user click, it calls an action creator.
 * **Action Creator** is a function that returns an action. This action is automatically sent to all the reducers inside of the application. If the reducer returns something then that corresponding property in the global state is set to that value. Once all the reducers have processed the action the newly assembled state gets sent to all the different containers. Containers then re-render with new state/props.
-* **Action** is an object that flows through all of the different reducers. Action always have **type** as property and sometimes a **payload**.
+* **Action** is an object that flows through all of the different reducers. Actions always have **type** as property and sometimes a **payload**.
 * type - describes the purpose of the action
 * payload - describes the conditions of the action that is being triggered
 
