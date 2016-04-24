@@ -4,6 +4,6 @@ export default function() {
     {title: 'JavaScript' },
     {title: 'Harry Potter'},
     {title: 'The Dark Knight'},
-    {title: 'Lego Movie'}
+    {title: 'Nancy Drew'}
   ]
 }

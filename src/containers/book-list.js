@@ -1,11 +1,12 @@
 // to render a list of books
 // using react-redux library to connect react with redux state
 // react-redux forms the bridge between react and redux
-// so we promote this Component to a container so that it will have a knowledge of redux state
+// Promote this Component to a container so that it will have a knowledge of redux state
 
 
-// if we use curly braces we pull off a sigle property
+// curly braces  pulls off a single property
 import React, { Component } from 'react';
+// connect function from react-redux
 import { connect } from 'react-redux';
 
 class BookList extends Component {
@@ -29,13 +30,16 @@ class BookList extends Component {
 
 }
 // connect from react-redux provides mapStateToProps function
+// if state changes then container will automatically re-render
 function mapStateToProps(state) {
   // whatever is returned will show up as props
   // inside of BookList
   return (
-
-
+    books: state.books
   );
-
-
 }
+
+// whenever we create a container, we don't export the Component
+// but export connect which takes a function and a Component which produces a container
+
+export default connect(mapStateToProps)(BookList);
