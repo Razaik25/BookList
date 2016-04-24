@@ -36,8 +36,8 @@ It is a two step process
 It forms a bridge between react and redux libraries. Normally the Components which don't have a knowledge of redux state are referred as dumb components and components which have knowledge of redux state are referred as smart components. To make a component a smart component we make use of container class in react-redux.
 
 #### How to decide what is a container and what is a react component?
-In general, we want the ***most parent component*** that cares about a piece of state to be a container. In this case, BookList cares about when the list of books changes so it can be a container. Also BookDetail cares about when the active book changes so it can be a component. The App component on the other hand does not care about the list of books and the currently selected books. It only renders BookList and BookDetail on the page. So App will be a dumb component while BookList/BookDetail will be smart components.
+In general, the *** most parent component *** that cares about a piece of state to be a container. In this case, BookList cares about when the list of books changes so it can be a container. Also BookDetail cares about when the active book changes so it can be a component. The App component on the other hand does not care about the list of books and the currently selected books. It only renders BookList and BookDetail on the page. So App will be a dumb component while BookList/BookDetail will be smart components.
 ---
 #### Actions and Action Creator
-When user triggers an event such as a user click, it calls an action creator.
-Action Creator- returns an action. This action is automatically sent to all the reducers inside of the application. If the reducer returns something then that corresponding property in the global state is set to that value.
+* When user triggers an event such as a user click, it calls an action creator.
+* Action Creator- returns an action. This action is automatically sent to all the reducers inside of the application. If the reducer returns something then that corresponding property in the global state is set to that value.
