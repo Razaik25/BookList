@@ -30,7 +30,7 @@ It is a function that returns a piece of the application state. Since an applica
 
 #### Creating a Reducer
 It is a two step process
-* Create a Reducer, it can have two arguments i.e. state and action
+* Create a Reducer, it can have two arguments i.e. state(component state not application state) and action
 * Wire it into the application - To connect a react component with redux state a separate library called react-redux is needed.
 
 #### react-redux library
@@ -43,7 +43,7 @@ Actions and Action Creator
 ---
 * When user triggers an event such as a user click, it calls an action creator.
 * **Action Creator** is a function that returns an action. This action is automatically sent to all the reducers inside of the application. If the reducer returns something then that corresponding property in the global state is set to that value. Once all the reducers have processed the action the newly assembled state gets sent to all the different containers. Containers then re-render with new state/props.
-* **Action** is an object that flows through all of the different reducers. Action always has **type** as property and sometimes a **payload**.
+* **Action** is an object that flows through all of the different reducers. Action always have **type** as property and sometimes a **payload**.
 * type - describes the purpose of the action
 * payload - describes the conditions of the action that is being triggered
 
@@ -52,4 +52,4 @@ Actions and Action Creator
 By using two functions
 
 * function bindActionCreators from redux library
-* function mapDispatchToProps from react-redux
+* function mapDispatchToProps from react-redux library
