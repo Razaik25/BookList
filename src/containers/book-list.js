@@ -1,8 +1,7 @@
 // to render a list of books
 // using react-redux library to connect react with redux state
 // react-redux forms the bridge between react and redux
-// Promote this Component to a container so that it will have a knowledge of redux state
-
+// Promote this Component to a container so that it will have  knowledge of redux state
 
 // curly braces  pulls off a single property
 import React, { Component } from 'react';
@@ -18,7 +17,12 @@ class BookList extends Component {
   renderList() {
     return this.props.books.map((book) => {
       return (
-        <li key={book.title} className="list-group-item">{book.title}></li>
+        <li
+        key={book.title}
+        onClick = {() => this.props.selectBook(book)}
+        className="list-group-item">
+        {book.title}>
+        </li>
       );
     });
   }
@@ -43,6 +47,7 @@ function mapStateToProps(state) {
 }
 
 // anything returned from this function will end up as props on the BookList container
+// so can access this.props.selectBook inside of BookList
 function mapDispatchToProps(dispatch){
   // whenever selectBook is called, result should be passed to all of the reducers
   return bindActionCreators({ selectBook: selectBook}, dispatch);
